@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  @apply box-border;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-white text-vault-900 font-inter;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  @apply font-garamond font-bold;
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-vault-100;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-gold-500 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-gold-600;
+}
+
+/* Animation utilities */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Gradient text */
+.gradient-text {
+  @apply bg-gradient-to-r from-vault-500 to-legacy-500 bg-clip-text text-transparent;
+}
+
+/* Glassmorphism */
+.glass {
+  @apply backdrop-blur-md bg-white/20 border border-white/30 rounded-lg;
+}
